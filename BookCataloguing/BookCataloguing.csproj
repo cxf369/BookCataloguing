@@ -117,11 +117,20 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserControlauthor.resx">
+      <DependentUpon>UserControlauthor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControlbooks.resx">
       <DependentUpon>UserControlbooks.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlbooks2.resx">
       <DependentUpon>UserControlbooks2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlgenre.resx">
+      <DependentUpon>UserControlgenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlrating.resx">
+      <DependentUpon>UserControlrating.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlupinsdel.resx">
       <DependentUpon>UserControlupinsdel.cs</DependentUpon>

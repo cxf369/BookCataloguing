@@ -35,6 +35,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "UserControlupinsdel";
+            this.Size = new System.Drawing.Size(943, 735);
             this.Load += new System.EventHandler(this.UserControlupinsdel_Load);
             this.ResumeLayout(false);
 

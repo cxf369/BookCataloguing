@@ -73,7 +73,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Name = "UserControlbooks";
-            this.Size = new System.Drawing.Size(942, 2346);
+            this.Size = new System.Drawing.Size(943, 735);
             this.ResumeLayout(false);
             this.PerformLayout();
 
