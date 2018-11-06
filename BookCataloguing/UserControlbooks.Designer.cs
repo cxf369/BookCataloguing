@@ -37,7 +37,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.Name = "UserControlbooks";
-            this.Size = new System.Drawing.Size(943, 735);
+            this.Size = new System.Drawing.Size(943, 747);
             this.ResumeLayout(false);
 
         }
