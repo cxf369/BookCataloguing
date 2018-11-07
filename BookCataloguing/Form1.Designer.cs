@@ -39,12 +39,11 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.controlpanel = new System.Windows.Forms.Panel();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.database1DataSet = new BookCataloguing.Database1DataSet();
             this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bookTableAdapter = new BookCataloguing.Database1DataSetTableAdapters.bookTableAdapter();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
-            this.controlpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -114,12 +113,13 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Bold);
             this.button3.ForeColor = System.Drawing.Color.Silver;
-            this.button3.Location = new System.Drawing.Point(0, 337);
+            this.button3.Location = new System.Drawing.Point(0, 338);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(232, 108);
             this.button3.TabIndex = 2;
             this.button3.Text = "Genres";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -133,6 +133,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "Authors";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button6
             // 
@@ -151,24 +152,10 @@
             // controlpanel
             // 
             this.controlpanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("controlpanel.BackgroundImage")));
-            this.controlpanel.Controls.Add(this.listBox1);
-            this.controlpanel.Location = new System.Drawing.Point(249, 12);
+            this.controlpanel.Location = new System.Drawing.Point(249, 82);
             this.controlpanel.Name = "controlpanel";
-            this.controlpanel.Size = new System.Drawing.Size(971, 743);
+            this.controlpanel.Size = new System.Drawing.Size(971, 673);
             this.controlpanel.TabIndex = 6;
-            // 
-            // listBox1
-            // 
-            this.listBox1.DataSource = this.bookBindingSource;
-            this.listBox1.DisplayMember = "bname";
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(262, 78);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 84);
-            this.listBox1.TabIndex = 0;
-            this.listBox1.ValueMember = "bid";
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // database1DataSet
             // 
@@ -184,11 +171,24 @@
             // 
             this.bookTableAdapter.ClearBeforeFill = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Symbol", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label1.Location = new System.Drawing.Point(540, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(421, 65);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Book Cataloguing";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1232, 788);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.controlpanel);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button1);
@@ -197,10 +197,10 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel2.ResumeLayout(false);
-            this.controlpanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -215,9 +215,9 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Panel controlpanel;
-        private System.Windows.Forms.ListBox listBox1;
         private Database1DataSet database1DataSet;
         private System.Windows.Forms.BindingSource bookBindingSource;
         private Database1DataSetTableAdapters.bookTableAdapter bookTableAdapter;
+        private System.Windows.Forms.Label label1;
     }
 }
