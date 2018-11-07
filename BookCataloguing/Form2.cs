@@ -10,38 +10,11 @@ using System.Windows.Forms;
 
 namespace BookCataloguing
 {
-    public partial class Form3 : Form
+    public partial class Form2 : Form
     {
-        public Form3()
+        public Form2()
         {
             InitializeComponent();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            
-
-        }
-
-        
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //if(! controlpanel.Controls.Contains(UserControlbooks.instance))
-            //{
-                controlpanel.Controls.Add(UserControlbooks.instance);
-                UserControlbooks.instance.Dock = DockStyle.Fill;
-                UserControlbooks.instance.BringToFront();
-         //   }
-           // else
-           // {
-           //     UserControlbooks.instance.BringToFront();
-          //  }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
