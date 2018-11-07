@@ -12,6 +12,18 @@ namespace BookCataloguing
 {
     public partial class UserControlbooks : UserControl
     {
+        private static UserControlbooks ins;
+        public static UserControlbooks instance
+        {
+            get
+            {
+                if(ins == null)
+                {
+                    ins = new UserControlbooks();
+                }
+                return ins;
+            }
+        }
         public UserControlbooks()
         {
             InitializeComponent();

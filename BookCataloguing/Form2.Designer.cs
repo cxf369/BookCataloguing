@@ -1,6 +1,6 @@
 ﻿namespace BookCataloguing
 {
-    partial class Form2
+    partial class Form3
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
-            this.panel4 = new System.Windows.Forms.Panel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
+            this.controlpanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.sidepanel = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -44,18 +44,18 @@
             this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel4
+            // controlpanel
             // 
-            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
-            this.panel4.Location = new System.Drawing.Point(232, 97);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(943, 747);
-            this.panel4.TabIndex = 3;
+            this.controlpanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("controlpanel.BackgroundImage")));
+            this.controlpanel.Location = new System.Drawing.Point(232, 97);
+            this.controlpanel.Name = "controlpanel";
+            this.controlpanel.Size = new System.Drawing.Size(943, 747);
+            this.controlpanel.TabIndex = 3;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.sidepanel);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
@@ -67,13 +67,13 @@
             this.panel1.Size = new System.Drawing.Size(232, 844);
             this.panel1.TabIndex = 4;
             // 
-            // panel3
+            // sidepanel
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.panel3.Location = new System.Drawing.Point(0, 451);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(23, 108);
-            this.panel3.TabIndex = 5;
+            this.sidepanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sidepanel.Location = new System.Drawing.Point(0, 451);
+            this.sidepanel.Name = "sidepanel";
+            this.sidepanel.Size = new System.Drawing.Size(23, 108);
+            this.sidepanel.TabIndex = 5;
             // 
             // button5
             // 
@@ -100,6 +100,7 @@
             this.button4.TabIndex = 3;
             this.button4.Text = "Ratings";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -126,6 +127,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "Authors";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -139,6 +141,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Books";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel5
             // 
@@ -175,10 +178,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1178, 844);
+            this.Controls.Add(this.controlpanel);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form2";
             this.Text = "Form2";
@@ -191,9 +194,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel controlpanel;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel sidepanel;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
