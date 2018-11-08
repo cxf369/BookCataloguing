@@ -43,7 +43,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1717, 73);
+            this.panel2.Size = new System.Drawing.Size(1739, 73);
             this.panel2.TabIndex = 10;
             // 
             // button2
@@ -56,14 +56,13 @@
             this.button2.Size = new System.Drawing.Size(47, 58);
             this.button2.TabIndex = 6;
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(1587, 12);
+            this.button3.Location = new System.Drawing.Point(1590, 12);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(47, 58);
             this.button3.TabIndex = 5;
@@ -74,7 +73,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(1717, 887);
+            this.ClientSize = new System.Drawing.Size(1739, 943);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form4";
