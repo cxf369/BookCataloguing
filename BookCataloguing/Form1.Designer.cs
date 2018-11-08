@@ -46,12 +46,11 @@
             // 
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Location = new System.Drawing.Point(0, 139);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(209, 110);
+            this.button1.Size = new System.Drawing.Size(209, 130);
             this.button1.TabIndex = 0;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -75,11 +74,12 @@
             // 
             this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
             this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button6.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(0, 580);
+            this.button6.Location = new System.Drawing.Point(0, 683);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(200, 110);
+            this.button6.Size = new System.Drawing.Size(209, 130);
             this.button6.TabIndex = 5;
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
@@ -90,9 +90,9 @@
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(0, 348);
+            this.button4.Location = new System.Drawing.Point(0, 547);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(200, 110);
+            this.button4.Size = new System.Drawing.Size(209, 130);
             this.button4.TabIndex = 3;
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click_1);
@@ -101,11 +101,12 @@
             // 
             this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button5.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(-3, 464);
+            this.button5.Location = new System.Drawing.Point(0, 813);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(200, 110);
+            this.button5.Size = new System.Drawing.Size(209, 130);
             this.button5.TabIndex = 4;
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
@@ -116,9 +117,9 @@
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(3, 116);
+            this.button2.Location = new System.Drawing.Point(3, 275);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(200, 110);
+            this.button2.Size = new System.Drawing.Size(200, 130);
             this.button2.TabIndex = 1;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
@@ -129,9 +130,9 @@
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(0, 232);
+            this.button3.Location = new System.Drawing.Point(6, 411);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(200, 110);
+            this.button3.Size = new System.Drawing.Size(200, 130);
             this.button3.TabIndex = 2;
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
@@ -146,13 +147,14 @@
             this.button8.Size = new System.Drawing.Size(64, 48);
             this.button8.TabIndex = 0;
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(206, 0);
+            this.label1.Location = new System.Drawing.Point(215, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(474, 70);
             this.label1.TabIndex = 12;
@@ -161,9 +163,9 @@
             // panel2
             // 
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
-            this.panel2.Location = new System.Drawing.Point(203, 79);
+            this.panel2.Location = new System.Drawing.Point(209, 118);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1534, 864);
+            this.panel2.Size = new System.Drawing.Size(1528, 825);
             this.panel2.TabIndex = 16;
             // 
             // Form1
