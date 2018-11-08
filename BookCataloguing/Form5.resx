@@ -118,29 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJ
-        TUUH4gsICjEg1ZirewAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAACBSURBVEhL
-        7dYrCoBAFEbh0ZW4AV/d7U8QLFosgt1HcgF6LhhEps0DlDnwFcP9YZLKshw9NDL54DI5vuC8dXDW+7iY
-        kcI60/EDDayLx43F48a8Hk8wwstxyfuAJE+04vsjBYKMbPA6UuIfIxWCjOwIPjLBaTWeIy2cJyMDNAy/
-        LUpdr+Vzz0cEmKYAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Lorem ipsum dolor sit amet, consectetur adipiscing
- elit. Pellentesque lacinia metus eget nisl elementum,
- non pulvinar felis lobortis. Pellentesque dui turpis, 
-pellentesque in turpis id, malesuada pharetra sapien. 
-vulputate luctus eros, nec iaculis ligula accumsan 
-non. Integer volutpat lectus ac ligula auctor rhoncus. 
-Ut eu tristique magna, ut pretium ex. Sed consectetur 
-sit amet pretium varius. Donec et venenatis sem, eget o
- ex. Integer porttitor bibendum cursus. Maecenas conser
- nisi in enim pulvinar, ut consequat neque dignissim. </value>
-  </data>
-  <data name="button4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         EwAACxMBAJqcGAAAASVJREFUWEftllFKw0AURVO0a1LcpkIRXIBW7Xpq23Wo+KP3QB4M4U3eZDolH+bA
@@ -149,6 +127,16 @@ sit amet pretium varius. Donec et venenatis sem, eget o
         e717TcINSuSCPJuGG6UlLhJuRCUuGg6zFpj1K5j1RzgWThB693iJnV0iCicAp762iygJN5qXmBJusCZX
         YvjfMUpNuMHa6L8j5FF6A6JwY6zERoZwgBwuLA03crv4JUNaHUq9EnsZwrH8Q3KA5AxXE25Qgm3nyQm/
         kQsLCV33B2uPAsKgFbc0AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="button3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJ
+        TUUH4gsICjEg1ZirewAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAACBSURBVEhL
+        7dYrCoBAFEbh0ZW4AV/d7U8QLFosgt1HcgF6LhhEps0DlDnwFcP9YZLKshw9NDL54DI5vuC8dXDW+7iY
+        kcI60/EDDayLx43F48a8Hk8wwstxyfuAJE+04vsjBYKMbPA6UuIfIxWCjOwIPjLBaTWeIy2cJyMDNAy/
+        LUpdr+Vzz0cEmKYAAAAASUVORK5CYII=
 </value>
   </data>
 </root>

@@ -10,32 +10,14 @@ using System.Windows.Forms;
 
 namespace BookCataloguing
 {
-    public partial class Form2 : Form
+    public partial class Form4 : Form
     {
-        
-
-        
-        public Form2()
+        public Form4()
         {
             InitializeComponent();
         }
 
         private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void button4_Click(object sender, EventArgs e)
         {
             this.Close();
         }

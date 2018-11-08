@@ -15,6 +15,10 @@ namespace BookCataloguing
     {
         Form2 f2 = new Form2();
         Form3 f3 = new Form3();
+        Form4 f4 = new Form4();
+        Form5 f5 = new Form5();
+        Form6 f6 = new Form6();
+        Form7 f7 = new Form7();
 
 
         public Form1()
@@ -24,15 +28,15 @@ namespace BookCataloguing
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            f2.Show();
-            this.Hide();
+            try
+            {
+                f2.ShowDialog();
+            }
+            catch(Exception exception)
+            {
+                new Form2().ShowDialog();
+            }
            
-            
-            
-           
-            
-
 
         }
 
@@ -59,7 +63,62 @@ namespace BookCataloguing
 
         private void button2_Click_1(object sender, EventArgs e)
         {
+            try
+            {
+                f3.ShowDialog();
+            }
+            catch (Exception exceptio)
+            {
+                new Form3().ShowDialog();
+            }
+        }
 
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                f4.ShowDialog();
+            }
+            catch (Exception exceptin)
+            {
+                new Form4().ShowDialog();
+            }
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                f5.ShowDialog();
+            }
+            catch (Exception excepton)
+            {
+                new Form5().ShowDialog();
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f6.ShowDialog();
+            }
+            catch (Exception excepion)
+            {
+                new Form6().ShowDialog();
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f7.ShowDialog();
+            }
+            catch (Exception exception)
+            {
+                new Form7().ShowDialog();
+            }
         }
     }
 }
