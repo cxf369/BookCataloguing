@@ -32,6 +32,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,6 +57,7 @@
             this.button2.Size = new System.Drawing.Size(47, 58);
             this.button2.TabIndex = 6;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // button3
             // 
@@ -68,12 +70,22 @@
             this.button3.TabIndex = 5;
             this.button3.UseVisualStyleBackColor = true;
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(47)))), ((int)(((byte)(62)))));
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 923);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1739, 20);
+            this.panel3.TabIndex = 11;
+            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(1739, 943);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form5";
@@ -89,5 +101,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Panel panel3;
     }
 }
