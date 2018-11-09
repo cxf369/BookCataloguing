@@ -47,7 +47,7 @@ namespace BookCataloguing
 
         {
             con.Open();
-            string syntax = "SELECT authname FROM authors where bid=1";
+            string syntax = "SELECT authname FROM authors where bid=" + "1";
             cmd = new SqlCommand(syntax, con);
             dr = cmd.ExecuteReader();
             dr.Read();
