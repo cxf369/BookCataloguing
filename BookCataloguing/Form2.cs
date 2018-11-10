@@ -47,11 +47,12 @@ namespace BookCataloguing
 
         {
             con.Open();
-            string syntax = "SELECT authname FROM authors where bid=" + "1";
+            string syntax = "SELECT a.authname, r.rating FROM authors a, rating r where a.bid=1 and r.bid=1";
             cmd = new SqlCommand(syntax, con);
             dr = cmd.ExecuteReader();
             dr.Read();
             label3.Text=dr[0].ToString();
+            label4.Text = dr[1].ToString();
             con.Close();
         }
         private void button5_Click(object sender, EventArgs e)
