@@ -78,27 +78,16 @@ namespace BookCataloguing
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                f6.ShowDialog();
-            }
-            catch (Exception excepion)
-            {
-                new Form6().ShowDialog();
-            }
-        }
 
         private void button6_Click(object sender, EventArgs e)
         {
             try
             {
-                f7.ShowDialog();
+                f6.ShowDialog();
             }
             catch (Exception exception)
             {
-                new Form7().ShowDialog();
+                new Form6().ShowDialog();
             }
         }
 
