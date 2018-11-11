@@ -28,18 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             this.panel2 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.database1DataSet = new BookCataloguing.Database1DataSet();
+            this.authorsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.authorsTableAdapter = new BookCataloguing.Database1DataSetTableAdapters.authorsTableAdapter();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.authorsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -79,6 +88,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightGray;
+            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Location = new System.Drawing.Point(308, 297);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(851, 304);
@@ -93,16 +103,6 @@
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(687, 248);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 26);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "label1";
-            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(53)))), ((int)(((byte)(66)))));
@@ -116,6 +116,8 @@
             // listBox1
             // 
             this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox1.DataSource = this.authorsBindingSource;
+            this.listBox1.DisplayMember = "authname";
             this.listBox1.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 16;
@@ -124,6 +126,40 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(259, 528);
             this.listBox1.TabIndex = 0;
+            this.listBox1.ValueMember = "bid";
+            // 
+            // database1DataSet
+            // 
+            this.database1DataSet.DataSetName = "Database1DataSet";
+            this.database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // authorsBindingSource
+            // 
+            this.authorsBindingSource.DataMember = "authors";
+            this.authorsBindingSource.DataSource = this.database1DataSet;
+            // 
+            // authorsTableAdapter
+            // 
+            this.authorsTableAdapter.ClearBeforeFill = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.authorsBindingSource, "authname", true));
+            this.label1.Location = new System.Drawing.Point(691, 256);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "label1";
+            this.label1.Click += new System.EventHandler(this.bkld);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(56, 23);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(742, 150);
+            this.dataGridView1.TabIndex = 0;
             // 
             // Form3
             // 
@@ -131,8 +167,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(1159, 613);
-            this.Controls.Add(this.panel4);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
@@ -142,9 +178,14 @@
             this.Name = "Form3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form3";
+            this.Load += new System.EventHandler(this.Form3_Load);
             this.panel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.authorsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -157,8 +198,12 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.ListBox listBox1;
+        private Database1DataSet database1DataSet;
+        private System.Windows.Forms.BindingSource authorsBindingSource;
+        private Database1DataSetTableAdapters.authorsTableAdapter authorsTableAdapter;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
