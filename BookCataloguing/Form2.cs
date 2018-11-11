@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Diagnostics;
 namespace BookCataloguing
 {
     public partial class Form2 : Form
@@ -58,6 +59,21 @@ namespace BookCataloguing
             this.bookTableAdapter.Fill(this.database1DataSet.book);
            
            
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            con.Open();
+
+            String b = label8.Text;
+            string syntax = "SELECT buylink FROM link WHERE bid="+b;
+            cmd = new SqlCommand(syntax, con);
+            dr = cmd.ExecuteReader();
+            dr.Read();
+            Process.Start(dr[0].ToString());
+            
+            con.Close();
 
         }
     }
