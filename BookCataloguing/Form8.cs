@@ -26,7 +26,7 @@ namespace BookCataloguing
         private void button1_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Database1.mdf;Integrated Security=True");
-            SqlCommand cmd = new SqlCommand("bookinsp", con);
+            SqlCommand cmd = new SqlCommand("insert_SP", con);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@bid", textBox14.Text);
             cmd.Parameters.AddWithValue("@bname", textBox1.Text);
@@ -34,6 +34,7 @@ namespace BookCataloguing
             cmd.Parameters.AddWithValue("@bpub", textBox9.Text);
             cmd.Parameters.AddWithValue("@bpubyr", textBox10.Text);
             cmd.Parameters.AddWithValue("@breview", textBox8.Text);
+            cmd.Parameters.AddWithValue("@rating", textBox2.Text);
 
             cmd.Parameters.AddWithValue("@authname", textBox6.Text);
             cmd.Parameters.AddWithValue("@awards", textBox5.Text);
@@ -49,6 +50,7 @@ namespace BookCataloguing
             try
             {
                 cmd.ExecuteNonQuery();
+                this.Close();
             }
             catch (Exception ex)
             {
