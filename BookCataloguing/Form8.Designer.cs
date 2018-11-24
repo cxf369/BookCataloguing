@@ -71,7 +71,7 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(16, 103);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(381, 26);
             this.textBox1.TabIndex = 0;
@@ -81,7 +81,7 @@
             // 
             this.textBox2.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F);
             this.textBox2.Location = new System.Drawing.Point(0, 41);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(121, 33);
             this.textBox2.TabIndex = 1;
@@ -123,7 +123,7 @@
             // 
             this.textBox3.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F);
             this.textBox3.Location = new System.Drawing.Point(247, 41);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(121, 33);
             this.textBox3.TabIndex = 5;
@@ -133,7 +133,7 @@
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox4.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F);
             this.textBox4.Location = new System.Drawing.Point(16, 369);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(381, 26);
             this.textBox4.TabIndex = 6;
@@ -143,7 +143,7 @@
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox5.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F);
             this.textBox5.Location = new System.Drawing.Point(16, 636);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(381, 26);
             this.textBox5.TabIndex = 7;
@@ -153,7 +153,7 @@
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox6.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F);
             this.textBox6.Location = new System.Drawing.Point(16, 167);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(381, 26);
             this.textBox6.TabIndex = 8;
@@ -163,7 +163,7 @@
             this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox7.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F);
             this.textBox7.Location = new System.Drawing.Point(16, 434);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(2);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(381, 26);
             this.textBox7.TabIndex = 9;
@@ -171,7 +171,7 @@
             // textBox8
             // 
             this.textBox8.Location = new System.Drawing.Point(21, 42);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(2);
             this.textBox8.Multiline = true;
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(370, 412);
@@ -249,7 +249,7 @@
             this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox9.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F);
             this.textBox9.Location = new System.Drawing.Point(16, 234);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(2);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(381, 26);
             this.textBox9.TabIndex = 17;
@@ -259,7 +259,7 @@
             this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox10.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F);
             this.textBox10.Location = new System.Drawing.Point(16, 302);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox10.Margin = new System.Windows.Forms.Padding(2);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(381, 26);
             this.textBox10.TabIndex = 18;
@@ -293,7 +293,7 @@
             this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox11.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F);
             this.textBox11.Location = new System.Drawing.Point(16, 503);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox11.Margin = new System.Windows.Forms.Padding(2);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(381, 26);
             this.textBox11.TabIndex = 21;
@@ -303,7 +303,7 @@
             this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox12.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F);
             this.textBox12.Location = new System.Drawing.Point(16, 569);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox12.Margin = new System.Windows.Forms.Padding(2);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(381, 26);
             this.textBox12.TabIndex = 22;
@@ -312,7 +312,7 @@
             // 
             this.textBox13.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F);
             this.textBox13.Location = new System.Drawing.Point(122, 41);
-            this.textBox13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox13.Margin = new System.Windows.Forms.Padding(2);
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(121, 33);
             this.textBox13.TabIndex = 23;
@@ -355,7 +355,7 @@
             this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox14.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F);
             this.textBox14.Location = new System.Drawing.Point(16, 38);
-            this.textBox14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox14.Margin = new System.Windows.Forms.Padding(2);
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(381, 26);
             this.textBox14.TabIndex = 27;
@@ -364,7 +364,7 @@
             // 
             this.button1.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Bold);
             this.button1.Location = new System.Drawing.Point(499, 612);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(410, 74);
             this.button1.TabIndex = 28;
@@ -440,13 +440,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(53)))), ((int)(((byte)(66)))));
-            this.ClientSize = new System.Drawing.Size(935, 750);
+            this.ClientSize = new System.Drawing.Size(1542, 750);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form8";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form8";
