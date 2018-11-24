@@ -59,21 +59,21 @@ namespace BookCataloguing
             {
                 MessageBox.Show(" " + ex);
             }
-            con.Open();
+            
 
-            String b = label3.Text;
-            string syntax = "SELECT authimgurl FROM authors WHERE bid=" + b; 
-            cmd = new SqlCommand(syntax, con);
+          //  String b = label3.Text;
+           // string syntax = "SELECT authimgurl FROM authors WHERE bid=" + b; 
+           // cmd = new SqlCommand(syntax, con);
 
 
-            Dr1 = cmd.ExecuteReader();
-            Dr1.Read();
+           // Dr1 = cmd.ExecuteReader();
+          //  Dr1.Read();
 
 
            
-            label2.Text = Dr1[0].ToString();
+           // label2.Text = Dr1[0].ToString();
            
-            con.Close();
+            
             pictureBox1.ImageLocation = label2.Text;
 
         }
@@ -93,6 +93,8 @@ namespace BookCataloguing
 
         private void Form3_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'database1DataSet1.authors' table. You can move, or remove it, as needed.
+            this.authorsTableAdapter1.Fill(this.database1DataSet1.authors);
             // TODO: This line of code loads data into the 'database1DataSet.authors' table. You can move, or remove it, as needed.
             this.authorsTableAdapter.Fill(this.database1DataSet.authors);
 

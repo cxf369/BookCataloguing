@@ -43,12 +43,17 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.database1DataSet1 = new BookCataloguing.Database1DataSet1();
+            this.authorsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.authorsTableAdapter1 = new BookCataloguing.Database1DataSet1TableAdapters.authorsTableAdapter();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.authorsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.authorsBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -107,7 +112,7 @@
             // listBox1
             // 
             this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox1.DataSource = this.authorsBindingSource;
+            this.listBox1.DataSource = this.authorsBindingSource1;
             this.listBox1.DisplayMember = "authname";
             this.listBox1.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.FormattingEnabled = true;
@@ -118,7 +123,7 @@
             this.listBox1.Size = new System.Drawing.Size(259, 512);
             this.listBox1.TabIndex = 0;
             this.listBox1.ValueMember = "bid";
-            this.listBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.listBox1_MouseMove);
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.bkld);
             // 
             // authorsBindingSource
             // 
@@ -137,7 +142,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.authorsBindingSource, "authname", true));
+            this.label1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.authorsBindingSource1, "authname", true));
             this.label1.Location = new System.Drawing.Point(701, 256);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
@@ -156,7 +161,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.authorsBindingSource, "authimgurl", true));
+            this.label2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.authorsBindingSource1, "authimgurl", true));
             this.label2.Location = new System.Drawing.Point(1026, 567);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
@@ -166,12 +171,26 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.authorsBindingSource, "bid", true));
+            this.label3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.authorsBindingSource1, "bid", true));
             this.label3.Location = new System.Drawing.Point(1029, 533);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(21, 13);
             this.label3.TabIndex = 19;
             this.label3.Text = "bid";
+            // 
+            // database1DataSet1
+            // 
+            this.database1DataSet1.DataSetName = "Database1DataSet1";
+            this.database1DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // authorsBindingSource1
+            // 
+            this.authorsBindingSource1.DataMember = "authors";
+            this.authorsBindingSource1.DataSource = this.database1DataSet1;
+            // 
+            // authorsTableAdapter1
+            // 
+            this.authorsTableAdapter1.ClearBeforeFill = true;
             // 
             // Form3
             // 
@@ -199,6 +218,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.authorsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.authorsBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,5 +240,8 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private Database1DataSet1 database1DataSet1;
+        private System.Windows.Forms.BindingSource authorsBindingSource1;
+        private Database1DataSet1TableAdapters.authorsTableAdapter authorsTableAdapter1;
     }
 }
