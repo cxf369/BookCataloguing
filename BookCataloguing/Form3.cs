@@ -81,5 +81,48 @@ namespace BookCataloguing
             this.authorsTableAdapter.Fill(this.database1DataSet.authors);
 
         }
+
+        private void listBox1_MouseMove(object sender, MouseEventArgs e)
+        {
+            try
+            {
+                cmd = new SqlCommand("auth1_SP", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@authname", label1.Text);
+                SqlDataAdapter DA = new SqlDataAdapter(cmd);
+                DataSet DS = new DataSet();
+                DA.Fill(DS);
+
+                con.Open();
+                try
+                {
+                    cmd.ExecuteNonQuery();
+
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("<<<INVALID SQL OPERATION>>> \n" + ex);
+
+                }
+                con.Close();
+
+                dataGridView1.DataSource = DS.Tables[0];
+                this.dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+                this.dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+                string a = label2.Text;
+                pictureBox1.ImageLocation = a;
+
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(" " + ex);
+            }
+
+        }
     }
 }

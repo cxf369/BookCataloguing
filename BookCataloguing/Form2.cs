@@ -67,6 +67,8 @@ namespace BookCataloguing
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'database1DataSet.location' table. You can move, or remove it, as needed.
+            this.locationTableAdapter.Fill(this.database1DataSet.location);
 
             // TODO: This line of code loads data into the 'database1DataSet.book' table. You can move, or remove it, as needed.
             this.bookTableAdapter.Fill(this.database1DataSet.book);
@@ -97,6 +99,20 @@ namespace BookCataloguing
             img();
             getauthrat();
             Dr1.Equals("");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            con.Open();
+
+            String readnow = label9.Text;
+            string syntax = "SELECT location FROM location WHERE bid=" + readnow;
+            cmd = new SqlCommand(syntax, con);
+            Dr1 = cmd.ExecuteReader();
+            Dr1.Read();
+            Process.Start(Dr1[0].ToString());
+
+            con.Close();
         }
     }
 }

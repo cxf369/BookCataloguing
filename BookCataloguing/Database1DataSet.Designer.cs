@@ -535,6 +535,8 @@ namespace BookCataloguing {
             
             private global::System.Data.DataColumn columnauthname;
             
+            private global::System.Data.DataColumn columnauthimgurl;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public authorsDataTable() {
@@ -586,6 +588,14 @@ namespace BookCataloguing {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn authimgurlColumn {
+                get {
+                    return this.columnauthimgurl;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -621,11 +631,12 @@ namespace BookCataloguing {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public authorsRow AddauthorsRow(bookRow parentbookRowByFK_authors_ToTable, string authname) {
+            public authorsRow AddauthorsRow(bookRow parentbookRowByFK_authors_ToTable, string authname, string authimgurl) {
                 authorsRow rowauthorsRow = ((authorsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        authname};
+                        authname,
+                        authimgurl};
                 if ((parentbookRowByFK_authors_ToTable != null)) {
                     columnValuesArray[0] = parentbookRowByFK_authors_ToTable[0];
                 }
@@ -660,6 +671,7 @@ namespace BookCataloguing {
             internal void InitVars() {
                 this.columnbid = base.Columns["bid"];
                 this.columnauthname = base.Columns["authname"];
+                this.columnauthimgurl = base.Columns["authimgurl"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -669,6 +681,8 @@ namespace BookCataloguing {
                 base.Columns.Add(this.columnbid);
                 this.columnauthname = new global::System.Data.DataColumn("authname", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnauthname);
+                this.columnauthimgurl = new global::System.Data.DataColumn("authimgurl", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnauthimgurl);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnbid}, true));
                 this.columnbid.AllowDBNull = false;
@@ -2572,6 +2586,22 @@ namespace BookCataloguing {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string authimgurl {
+                get {
+                    try {
+                        return ((string)(this[this.tableauthors.authimgurlColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'authimgurl\' in table \'authors\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableauthors.authimgurlColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bookRow bookRow {
                 get {
                     return ((bookRow)(this.GetParentRow(this.Table.ParentRelations["FK_authors_ToTable"])));
@@ -2591,6 +2621,18 @@ namespace BookCataloguing {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetauthnameNull() {
                 this[this.tableauthors.authnameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsauthimgurlNull() {
+                return this.IsNull(this.tableauthors.authimgurlColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetauthimgurlNull() {
+                this[this.tableauthors.authimgurlColumn] = global::System.Convert.DBNull;
             }
         }
         
