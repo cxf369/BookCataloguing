@@ -13,11 +13,12 @@ namespace BookCataloguing
 {
     public partial class Form8 : Form
     {
+        
         public Form8()
         {
             InitializeComponent();
         }
-
+        
         private void label4_Click(object sender, EventArgs e)
         {
 
@@ -42,13 +43,26 @@ namespace BookCataloguing
             cmd.Parameters.AddWithValue("@agepref", textBox13.Text);
             cmd.Parameters.AddWithValue("@buylink", textBox12.Text);
             cmd.Parameters.AddWithValue("@location", textBox11.Text);
-          //  cmd.Parameters.AddWithValue("@", maskedTextBox13.Text);
-          //  cmd.Parameters.AddWithValue("@rating", maskedTextBox13.Text);
-
+            //  cmd.Parameters.AddWithValue("@", maskedTextBox13.Text);
+            //  cmd.Parameters.AddWithValue("@rating", maskedTextBox13.Text);
+            float rat=float.Parse(textBox2.Text);
+            if (rat>5)
+            {
+                MessageBox.Show("ENTER RATING LESS THAN 5");
+            }
 
             con.Open();
             try
             {
+                if (rat > 5)
+                {
+                   // Form8 f8 = new Form8();
+                    MessageBox.Show("ENTER RATING LESS THAN 5");
+                    
+                    new Form8().ShowDialog();
+                    this.Close();
+                    return;
+                }
                 cmd.ExecuteNonQuery();
                 this.Close();
             }
