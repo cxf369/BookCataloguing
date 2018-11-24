@@ -16,22 +16,35 @@ namespace BookCataloguing
 
         SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Database1.mdf;Integrated Security=True");
         SqlCommand cmd;
-        SqlDataReader dr;
-     
+        SqlDataReader Dr1;
+
+        
+
         public void getauthrat()
 
 
         {
+           
+            
             con.Open();
              String b = label8.Text;
 
             string syntax = "SELECT a.authname, r.rating FROM authors a, rating r WHERE a.bid="+b+" and r.bid="+b;
             cmd = new SqlCommand(syntax, con);
-            dr = cmd.ExecuteReader();
-            dr.Read();
-            label3.Text = dr[0].ToString();
-            label4.Text = dr[1].ToString();
+            
+            
+                Dr1 = cmd.ExecuteReader();
+                Dr1.Read();
+                
+            
+           // catch(Exception e)
+           // {
+              //  MessageBox.Show("sql injection error");
+            //}
+            label3.Text = Dr1[0].ToString();
+            label4.Text = Dr1[1].ToString();
             con.Close();
+            // syntax = "";
         }
 
         public Form2()
@@ -39,11 +52,11 @@ namespace BookCataloguing
             InitializeComponent();
         }
 
-       public void img(object sender, EventArgs e)
+       public void img()
         {
             string a = label7.Text;
             pictureBox1.ImageLocation = a;
-            getauthrat();
+            
         }
        
         
@@ -69,12 +82,21 @@ namespace BookCataloguing
             String b = label8.Text;
             string syntax = "SELECT buylink FROM link WHERE bid="+b;
             cmd = new SqlCommand(syntax, con);
-            dr = cmd.ExecuteReader();
-            dr.Read();
-            Process.Start(dr[0].ToString());
+            Dr1 = cmd.ExecuteReader();
+            Dr1.Read();
+            Process.Start(Dr1[0].ToString());
             
             con.Close();
 
+        }
+
+        
+
+        private void listBox1_MouseMove(object sender, MouseEventArgs e)
+        {
+            img();
+            getauthrat();
+            Dr1.Equals("");
         }
     }
 }

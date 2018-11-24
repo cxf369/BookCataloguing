@@ -19,7 +19,8 @@ namespace BookCataloguing
         Form5 f5 = new Form5();
         Form6 f6 = new Form6();
         Form7 f7 = new Form7();
-
+        Form8 f8 = new Form8();
+        Form9 f9 = new Form9();
 
         public Form1()
         {
@@ -94,6 +95,30 @@ namespace BookCataloguing
         private void button8_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f8.ShowDialog();
+            }
+            catch (Exception xceptio)
+            {
+                new Form8().ShowDialog();
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f9.ShowDialog();
+            }
+            catch (Exception xceptio)
+            {
+                new Form9().ShowDialog();
+            }
         }
     }
 }
