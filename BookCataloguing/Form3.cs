@@ -14,7 +14,8 @@ namespace BookCataloguing
     {
         SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Database1.mdf;Integrated Security=True");
         SqlCommand cmd;
-        
+        SqlDataReader Dr1;
+
         public Form3()
         {
             InitializeComponent();
@@ -58,7 +59,22 @@ namespace BookCataloguing
             {
                 MessageBox.Show(" " + ex);
             }
+            con.Open();
 
+            String b = label3.Text;
+            string syntax = "SELECT authimgurl FROM authors WHERE bid=" + b; 
+            cmd = new SqlCommand(syntax, con);
+
+
+            Dr1 = cmd.ExecuteReader();
+            Dr1.Read();
+
+
+           
+            label2.Text = Dr1[0].ToString();
+           
+            con.Close();
+            pictureBox1.ImageLocation = label2.Text;
 
         }
 
@@ -84,6 +100,8 @@ namespace BookCataloguing
 
         private void listBox1_MouseMove(object sender, MouseEventArgs e)
         {
+            string a = label2.Text;
+            pictureBox1.ImageLocation = a;
             try
             {
                 cmd = new SqlCommand("auth1_SP", con);
@@ -112,8 +130,7 @@ namespace BookCataloguing
                 this.dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
                 this.dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
-                string a = label2.Text;
-                pictureBox1.ImageLocation = a;
+               
 
 
 
