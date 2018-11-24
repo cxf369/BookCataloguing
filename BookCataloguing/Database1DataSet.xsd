@@ -105,7 +105,18 @@ SELECT bid, awards FROM awards WHERE (bid = @bid)</CommandText>
               <Mapping SourceColumn="bid" DataSetColumn="bid" />
               <Mapping SourceColumn="awards" DataSetColumn="awards" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="Database1ConnectionString (Settings)" DbObjectName="dbo.awards" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        bid, awards
+FROM            awards
+WHERE        (awards IS NOT NULL)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="bookTableAdapter" GeneratorDataComponentClassName="bookTableAdapter" Name="book" UserDataComponentName="bookTableAdapter">
             <MainSource>
@@ -394,7 +405,7 @@ SELECT bid, rating FROM rating WHERE (bid = @bid)</CommandText>
   <xs:element name="Database1DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Database1DataSet" msprop:Generator_UserDSName="Database1DataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="authors" msprop:Generator_TableClassName="authorsDataTable" msprop:Generator_TableVarName="tableauthors" msprop:Generator_RowChangedName="authorsRowChanged" msprop:Generator_TablePropName="authors" msprop:Generator_RowDeletingName="authorsRowDeleting" msprop:Generator_RowChangingName="authorsRowChanging" msprop:Generator_RowEvHandlerName="authorsRowChangeEventHandler" msprop:Generator_RowDeletedName="authorsRowDeleted" msprop:Generator_RowClassName="authorsRow" msprop:Generator_UserTableName="authors" msprop:Generator_RowEvArgName="authorsRowChangeEvent">
+        <xs:element name="authors" msprop:Generator_TableClassName="authorsDataTable" msprop:Generator_TableVarName="tableauthors" msprop:Generator_TablePropName="authors" msprop:Generator_RowDeletingName="authorsRowDeleting" msprop:Generator_RowChangingName="authorsRowChanging" msprop:Generator_RowEvHandlerName="authorsRowChangeEventHandler" msprop:Generator_RowDeletedName="authorsRowDeleted" msprop:Generator_UserTableName="authors" msprop:Generator_RowChangedName="authorsRowChanged" msprop:Generator_RowEvArgName="authorsRowChangeEvent" msprop:Generator_RowClassName="authorsRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="bid" msprop:Generator_ColumnVarNameInTable="columnbid" msprop:Generator_ColumnPropNameInRow="bid" msprop:Generator_ColumnPropNameInTable="bidColumn" msprop:Generator_UserColumnName="bid" type="xs:int" />
@@ -409,7 +420,7 @@ SELECT bid, rating FROM rating WHERE (bid = @bid)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="awards" msprop:Generator_TableClassName="awardsDataTable" msprop:Generator_TableVarName="tableawards" msprop:Generator_RowChangedName="awardsRowChanged" msprop:Generator_TablePropName="awards" msprop:Generator_RowDeletingName="awardsRowDeleting" msprop:Generator_RowChangingName="awardsRowChanging" msprop:Generator_RowEvHandlerName="awardsRowChangeEventHandler" msprop:Generator_RowDeletedName="awardsRowDeleted" msprop:Generator_RowClassName="awardsRow" msprop:Generator_UserTableName="awards" msprop:Generator_RowEvArgName="awardsRowChangeEvent">
+        <xs:element name="awards" msprop:Generator_TableClassName="awardsDataTable" msprop:Generator_TableVarName="tableawards" msprop:Generator_TablePropName="awards" msprop:Generator_RowDeletingName="awardsRowDeleting" msprop:Generator_RowChangingName="awardsRowChanging" msprop:Generator_RowEvHandlerName="awardsRowChangeEventHandler" msprop:Generator_RowDeletedName="awardsRowDeleted" msprop:Generator_UserTableName="awards" msprop:Generator_RowChangedName="awardsRowChanged" msprop:Generator_RowEvArgName="awardsRowChangeEvent" msprop:Generator_RowClassName="awardsRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="bid" msprop:Generator_ColumnVarNameInTable="columnbid" msprop:Generator_ColumnPropNameInRow="bid" msprop:Generator_ColumnPropNameInTable="bidColumn" msprop:Generator_UserColumnName="bid" type="xs:int" />
@@ -423,7 +434,7 @@ SELECT bid, rating FROM rating WHERE (bid = @bid)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="book" msprop:Generator_TableClassName="bookDataTable" msprop:Generator_TableVarName="tablebook" msprop:Generator_RowChangedName="bookRowChanged" msprop:Generator_TablePropName="book" msprop:Generator_RowDeletingName="bookRowDeleting" msprop:Generator_RowChangingName="bookRowChanging" msprop:Generator_RowEvHandlerName="bookRowChangeEventHandler" msprop:Generator_RowDeletedName="bookRowDeleted" msprop:Generator_RowClassName="bookRow" msprop:Generator_UserTableName="book" msprop:Generator_RowEvArgName="bookRowChangeEvent">
+        <xs:element name="book" msprop:Generator_TableClassName="bookDataTable" msprop:Generator_TableVarName="tablebook" msprop:Generator_TablePropName="book" msprop:Generator_RowDeletingName="bookRowDeleting" msprop:Generator_RowChangingName="bookRowChanging" msprop:Generator_RowEvHandlerName="bookRowChangeEventHandler" msprop:Generator_RowDeletedName="bookRowDeleted" msprop:Generator_UserTableName="book" msprop:Generator_RowChangedName="bookRowChanged" msprop:Generator_RowEvArgName="bookRowChangeEvent" msprop:Generator_RowClassName="bookRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="bid" msprop:Generator_ColumnVarNameInTable="columnbid" msprop:Generator_ColumnPropNameInRow="bid" msprop:Generator_ColumnPropNameInTable="bidColumn" msprop:Generator_UserColumnName="bid" type="xs:int" />
@@ -465,7 +476,7 @@ SELECT bid, rating FROM rating WHERE (bid = @bid)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="genre" msprop:Generator_TableClassName="genreDataTable" msprop:Generator_TableVarName="tablegenre" msprop:Generator_RowChangedName="genreRowChanged" msprop:Generator_TablePropName="genre" msprop:Generator_RowDeletingName="genreRowDeleting" msprop:Generator_RowChangingName="genreRowChanging" msprop:Generator_RowEvHandlerName="genreRowChangeEventHandler" msprop:Generator_RowDeletedName="genreRowDeleted" msprop:Generator_RowClassName="genreRow" msprop:Generator_UserTableName="genre" msprop:Generator_RowEvArgName="genreRowChangeEvent">
+        <xs:element name="genre" msprop:Generator_TableClassName="genreDataTable" msprop:Generator_TableVarName="tablegenre" msprop:Generator_TablePropName="genre" msprop:Generator_RowDeletingName="genreRowDeleting" msprop:Generator_RowChangingName="genreRowChanging" msprop:Generator_RowEvHandlerName="genreRowChangeEventHandler" msprop:Generator_RowDeletedName="genreRowDeleted" msprop:Generator_UserTableName="genre" msprop:Generator_RowChangedName="genreRowChanged" msprop:Generator_RowEvArgName="genreRowChangeEvent" msprop:Generator_RowClassName="genreRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="bid" msprop:Generator_ColumnVarNameInTable="columnbid" msprop:Generator_ColumnPropNameInRow="bid" msprop:Generator_ColumnPropNameInTable="bidColumn" msprop:Generator_UserColumnName="bid" type="xs:int" />
@@ -486,7 +497,7 @@ SELECT bid, rating FROM rating WHERE (bid = @bid)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="link" msprop:Generator_TableClassName="linkDataTable" msprop:Generator_TableVarName="tablelink" msprop:Generator_RowChangedName="linkRowChanged" msprop:Generator_TablePropName="link" msprop:Generator_RowDeletingName="linkRowDeleting" msprop:Generator_RowChangingName="linkRowChanging" msprop:Generator_RowEvHandlerName="linkRowChangeEventHandler" msprop:Generator_RowDeletedName="linkRowDeleted" msprop:Generator_RowClassName="linkRow" msprop:Generator_UserTableName="link" msprop:Generator_RowEvArgName="linkRowChangeEvent">
+        <xs:element name="link" msprop:Generator_TableClassName="linkDataTable" msprop:Generator_TableVarName="tablelink" msprop:Generator_TablePropName="link" msprop:Generator_RowDeletingName="linkRowDeleting" msprop:Generator_RowChangingName="linkRowChanging" msprop:Generator_RowEvHandlerName="linkRowChangeEventHandler" msprop:Generator_RowDeletedName="linkRowDeleted" msprop:Generator_UserTableName="link" msprop:Generator_RowChangedName="linkRowChanged" msprop:Generator_RowEvArgName="linkRowChangeEvent" msprop:Generator_RowClassName="linkRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="bid" msprop:Generator_ColumnVarNameInTable="columnbid" msprop:Generator_ColumnPropNameInRow="bid" msprop:Generator_ColumnPropNameInTable="bidColumn" msprop:Generator_UserColumnName="bid" type="xs:int" />
@@ -500,7 +511,7 @@ SELECT bid, rating FROM rating WHERE (bid = @bid)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="location" msprop:Generator_TableClassName="locationDataTable" msprop:Generator_TableVarName="tablelocation" msprop:Generator_RowChangedName="locationRowChanged" msprop:Generator_TablePropName="location" msprop:Generator_RowDeletingName="locationRowDeleting" msprop:Generator_RowChangingName="locationRowChanging" msprop:Generator_RowEvHandlerName="locationRowChangeEventHandler" msprop:Generator_RowDeletedName="locationRowDeleted" msprop:Generator_RowClassName="locationRow" msprop:Generator_UserTableName="location" msprop:Generator_RowEvArgName="locationRowChangeEvent">
+        <xs:element name="location" msprop:Generator_TableClassName="locationDataTable" msprop:Generator_TableVarName="tablelocation" msprop:Generator_TablePropName="location" msprop:Generator_RowDeletingName="locationRowDeleting" msprop:Generator_RowChangingName="locationRowChanging" msprop:Generator_RowEvHandlerName="locationRowChangeEventHandler" msprop:Generator_RowDeletedName="locationRowDeleted" msprop:Generator_UserTableName="location" msprop:Generator_RowChangedName="locationRowChanged" msprop:Generator_RowEvArgName="locationRowChangeEvent" msprop:Generator_RowClassName="locationRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="bid" msprop:Generator_ColumnVarNameInTable="columnbid" msprop:Generator_ColumnPropNameInRow="bid" msprop:Generator_ColumnPropNameInTable="bidColumn" msprop:Generator_UserColumnName="bid" type="xs:int" />
@@ -514,7 +525,7 @@ SELECT bid, rating FROM rating WHERE (bid = @bid)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="rating" msprop:Generator_TableClassName="ratingDataTable" msprop:Generator_TableVarName="tablerating" msprop:Generator_RowChangedName="ratingRowChanged" msprop:Generator_TablePropName="rating" msprop:Generator_RowDeletingName="ratingRowDeleting" msprop:Generator_RowChangingName="ratingRowChanging" msprop:Generator_RowEvHandlerName="ratingRowChangeEventHandler" msprop:Generator_RowDeletedName="ratingRowDeleted" msprop:Generator_RowClassName="ratingRow" msprop:Generator_UserTableName="rating" msprop:Generator_RowEvArgName="ratingRowChangeEvent">
+        <xs:element name="rating" msprop:Generator_TableClassName="ratingDataTable" msprop:Generator_TableVarName="tablerating" msprop:Generator_TablePropName="rating" msprop:Generator_RowDeletingName="ratingRowDeleting" msprop:Generator_RowChangingName="ratingRowChanging" msprop:Generator_RowEvHandlerName="ratingRowChangeEventHandler" msprop:Generator_RowDeletedName="ratingRowDeleted" msprop:Generator_UserTableName="rating" msprop:Generator_RowChangedName="ratingRowChanged" msprop:Generator_RowEvArgName="ratingRowChangeEvent" msprop:Generator_RowClassName="ratingRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="bid" msprop:Generator_ColumnVarNameInTable="columnbid" msprop:Generator_ColumnPropNameInRow="bid" msprop:Generator_ColumnPropNameInTable="bidColumn" msprop:Generator_UserColumnName="bid" type="xs:int" />
@@ -556,12 +567,12 @@ SELECT bid, rating FROM rating WHERE (bid = @bid)</CommandText>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_authors_ToTable" msdata:parent="book" msdata:child="authors" msdata:parentkey="bid" msdata:childkey="bid" msprop:Generator_UserChildTable="authors" msprop:Generator_ChildPropName="GetauthorsRows" msprop:Generator_UserRelationName="FK_authors_ToTable" msprop:Generator_ParentPropName="bookRow" msprop:Generator_RelationVarName="relationFK_authors_ToTable" msprop:Generator_UserParentTable="book" />
-      <msdata:Relationship name="FK_awards_ToTable" msdata:parent="book" msdata:child="awards" msdata:parentkey="bid" msdata:childkey="bid" msprop:Generator_UserChildTable="awards" msprop:Generator_ChildPropName="GetawardsRows" msprop:Generator_UserRelationName="FK_awards_ToTable" msprop:Generator_ParentPropName="bookRow" msprop:Generator_RelationVarName="relationFK_awards_ToTable" msprop:Generator_UserParentTable="book" />
-      <msdata:Relationship name="FK_genre_ToTable" msdata:parent="book" msdata:child="genre" msdata:parentkey="bid" msdata:childkey="bid" msprop:Generator_UserChildTable="genre" msprop:Generator_ChildPropName="GetgenreRows" msprop:Generator_UserRelationName="FK_genre_ToTable" msprop:Generator_RelationVarName="relationFK_genre_ToTable" msprop:Generator_UserParentTable="book" msprop:Generator_ParentPropName="bookRow" />
-      <msdata:Relationship name="FK_link_ToTable" msdata:parent="book" msdata:child="link" msdata:parentkey="bid" msdata:childkey="bid" msprop:Generator_UserChildTable="link" msprop:Generator_ChildPropName="GetlinkRows" msprop:Generator_UserRelationName="FK_link_ToTable" msprop:Generator_RelationVarName="relationFK_link_ToTable" msprop:Generator_UserParentTable="book" msprop:Generator_ParentPropName="bookRow" />
-      <msdata:Relationship name="FK_location_ToTable" msdata:parent="book" msdata:child="location" msdata:parentkey="bid" msdata:childkey="bid" msprop:Generator_UserChildTable="location" msprop:Generator_ChildPropName="GetlocationRows" msprop:Generator_UserRelationName="FK_location_ToTable" msprop:Generator_RelationVarName="relationFK_location_ToTable" msprop:Generator_UserParentTable="book" msprop:Generator_ParentPropName="bookRow" />
-      <msdata:Relationship name="FK_rating_ToTable" msdata:parent="book" msdata:child="rating" msdata:parentkey="bid" msdata:childkey="bid" msprop:Generator_UserChildTable="rating" msprop:Generator_ChildPropName="GetratingRows" msprop:Generator_UserRelationName="FK_rating_ToTable" msprop:Generator_RelationVarName="relationFK_rating_ToTable" msprop:Generator_UserParentTable="book" msprop:Generator_ParentPropName="bookRow" />
+      <msdata:Relationship name="FK_authors_ToTable" msdata:parent="book" msdata:child="authors" msdata:parentkey="bid" msdata:childkey="bid" msprop:Generator_UserChildTable="authors" msprop:Generator_ChildPropName="GetauthorsRows" msprop:Generator_UserRelationName="FK_authors_ToTable" msprop:Generator_RelationVarName="relationFK_authors_ToTable" msprop:Generator_UserParentTable="book" msprop:Generator_ParentPropName="bookRow" />
+      <msdata:Relationship name="FK_awards_ToTable" msdata:parent="book" msdata:child="awards" msdata:parentkey="bid" msdata:childkey="bid" msprop:Generator_UserChildTable="awards" msprop:Generator_ChildPropName="GetawardsRows" msprop:Generator_UserRelationName="FK_awards_ToTable" msprop:Generator_RelationVarName="relationFK_awards_ToTable" msprop:Generator_UserParentTable="book" msprop:Generator_ParentPropName="bookRow" />
+      <msdata:Relationship name="FK_genre_ToTable" msdata:parent="book" msdata:child="genre" msdata:parentkey="bid" msdata:childkey="bid" msprop:Generator_UserChildTable="genre" msprop:Generator_ChildPropName="GetgenreRows" msprop:Generator_UserRelationName="FK_genre_ToTable" msprop:Generator_ParentPropName="bookRow" msprop:Generator_RelationVarName="relationFK_genre_ToTable" msprop:Generator_UserParentTable="book" />
+      <msdata:Relationship name="FK_link_ToTable" msdata:parent="book" msdata:child="link" msdata:parentkey="bid" msdata:childkey="bid" msprop:Generator_UserChildTable="link" msprop:Generator_ChildPropName="GetlinkRows" msprop:Generator_UserRelationName="FK_link_ToTable" msprop:Generator_ParentPropName="bookRow" msprop:Generator_RelationVarName="relationFK_link_ToTable" msprop:Generator_UserParentTable="book" />
+      <msdata:Relationship name="FK_location_ToTable" msdata:parent="book" msdata:child="location" msdata:parentkey="bid" msdata:childkey="bid" msprop:Generator_UserChildTable="location" msprop:Generator_ChildPropName="GetlocationRows" msprop:Generator_UserRelationName="FK_location_ToTable" msprop:Generator_ParentPropName="bookRow" msprop:Generator_RelationVarName="relationFK_location_ToTable" msprop:Generator_UserParentTable="book" />
+      <msdata:Relationship name="FK_rating_ToTable" msdata:parent="book" msdata:child="rating" msdata:parentkey="bid" msdata:childkey="bid" msprop:Generator_UserChildTable="rating" msprop:Generator_ChildPropName="GetratingRows" msprop:Generator_UserRelationName="FK_rating_ToTable" msprop:Generator_ParentPropName="bookRow" msprop:Generator_RelationVarName="relationFK_rating_ToTable" msprop:Generator_UserParentTable="book" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

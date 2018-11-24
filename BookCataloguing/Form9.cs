@@ -25,6 +25,10 @@ namespace BookCataloguing
 
         private void Form9_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'database1DataSet.book' table. You can move, or remove it, as needed.
+            this.bookTableAdapter1.Fill(this.database1DataSet.book);
+            // TODO: This line of code loads data into the 'database1DataSet1.book' table. You can move, or remove it, as needed.
+            this.bookTableAdapter.Fill(this.database1DataSet1.book);
             try
             {
                 SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Database1.mdf;Integrated Security=True");
@@ -52,6 +56,11 @@ namespace BookCataloguing
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
         {
 
         }

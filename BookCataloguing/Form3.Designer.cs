@@ -36,6 +36,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.authorsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.database1DataSet1 = new BookCataloguing.Database1DataSet1();
             this.authorsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.database1DataSet = new BookCataloguing.Database1DataSet();
             this.authorsTableAdapter = new BookCataloguing.Database1DataSetTableAdapters.authorsTableAdapter();
@@ -43,17 +45,15 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.database1DataSet1 = new BookCataloguing.Database1DataSet1();
-            this.authorsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.authorsTableAdapter1 = new BookCataloguing.Database1DataSet1TableAdapters.authorsTableAdapter();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.authorsBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.authorsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.authorsBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -93,9 +93,10 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Location = new System.Drawing.Point(633, 52);
+            this.pictureBox1.Location = new System.Drawing.Point(621, 52);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(167, 183);
+            this.pictureBox1.Size = new System.Drawing.Size(192, 221);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
             // 
@@ -125,6 +126,16 @@
             this.listBox1.ValueMember = "bid";
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.bkld);
             // 
+            // authorsBindingSource1
+            // 
+            this.authorsBindingSource1.DataMember = "authors";
+            this.authorsBindingSource1.DataSource = this.database1DataSet1;
+            // 
+            // database1DataSet1
+            // 
+            this.database1DataSet1.DataSetName = "Database1DataSet1";
+            this.database1DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // authorsBindingSource
             // 
             this.authorsBindingSource.DataMember = "authors";
@@ -143,9 +154,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.authorsBindingSource1, "authname", true));
-            this.label1.Location = new System.Drawing.Point(701, 256);
+            this.label1.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(680, 298);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(69, 25);
             this.label1.TabIndex = 17;
             this.label1.Text = "label1";
             this.label1.Click += new System.EventHandler(this.bkld);
@@ -153,7 +165,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(369, 305);
+            this.dataGridView1.Location = new System.Drawing.Point(369, 355);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(742, 150);
             this.dataGridView1.TabIndex = 0;
@@ -177,16 +189,6 @@
             this.label3.Size = new System.Drawing.Size(21, 13);
             this.label3.TabIndex = 19;
             this.label3.Text = "bid";
-            // 
-            // database1DataSet1
-            // 
-            this.database1DataSet1.DataSetName = "Database1DataSet1";
-            this.database1DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // authorsBindingSource1
-            // 
-            this.authorsBindingSource1.DataMember = "authors";
-            this.authorsBindingSource1.DataSource = this.database1DataSet1;
             // 
             // authorsTableAdapter1
             // 
@@ -215,11 +217,11 @@
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.authorsBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.authorsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.authorsBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -31,6 +31,7 @@ namespace BookCataloguing
         {
             // TODO: This line of code loads data into the 'database1DataSet.awards' table. You can move, or remove it, as needed.
             this.awardsTableAdapter.Fill(this.database1DataSet.awards);
+            
 
         }
 
@@ -38,7 +39,7 @@ namespace BookCataloguing
         {
             try
             {
-                cmd = new SqlCommand("awd_sp", con);
+                cmd = new SqlCommand("awards_sp", con);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.AddWithValue("@awards", comboBox1.Text);
@@ -63,21 +64,39 @@ namespace BookCataloguing
                 dataGridView1.DataSource = DS.Tables[0];
                 this.dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
                 this.dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                this.dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+                
 
 
 
 
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(" " + ex);
+           catch (Exception ex)
+           {
+                MessageBox.Show(" " + "ok");
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.awardsTableAdapter.FillBy(this.database1DataSet.awards);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }

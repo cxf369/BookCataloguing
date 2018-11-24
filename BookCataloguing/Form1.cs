@@ -130,5 +130,17 @@ namespace BookCataloguing
                 new Form9().ShowDialog();
             }
         }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                f7.ShowDialog();
+            }
+            catch (Exception exption)
+            {
+                new Form7().ShowDialog();
+            }
+        }
     }
 }
