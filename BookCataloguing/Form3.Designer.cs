@@ -84,7 +84,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(47)))), ((int)(((byte)(62)))));
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 600);
+            this.panel3.Location = new System.Drawing.Point(0, 737);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1159, 13);
@@ -107,7 +107,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(0, 47);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(311, 553);
+            this.panel4.Size = new System.Drawing.Size(311, 690);
             this.panel4.TabIndex = 16;
             // 
             // listBox1
@@ -121,7 +121,7 @@
             this.listBox1.Location = new System.Drawing.Point(25, 16);
             this.listBox1.Margin = new System.Windows.Forms.Padding(2);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(259, 512);
+            this.listBox1.Size = new System.Drawing.Size(259, 624);
             this.listBox1.TabIndex = 0;
             this.listBox1.ValueMember = "bid";
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.bkld);
@@ -199,7 +199,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(1159, 613);
+            this.ClientSize = new System.Drawing.Size(1159, 750);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);

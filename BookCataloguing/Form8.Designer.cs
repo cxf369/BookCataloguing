@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form8));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -170,7 +171,7 @@
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(21, 42);
+            this.textBox8.Location = new System.Drawing.Point(51, 44);
             this.textBox8.Margin = new System.Windows.Forms.Padding(2);
             this.textBox8.Multiline = true;
             this.textBox8.Name = "textBox8";
@@ -363,10 +364,10 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(499, 612);
+            this.button1.Location = new System.Drawing.Point(622, 649);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(410, 74);
+            this.button1.Size = new System.Drawing.Size(480, 74);
             this.button1.TabIndex = 28;
             this.button1.Text = "SUBMIT";
             this.button1.UseVisualStyleBackColor = true;
@@ -395,9 +396,9 @@
             this.panel2.Controls.Add(this.textBox9);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.textBox4);
-            this.panel2.Location = new System.Drawing.Point(27, 24);
+            this.panel2.Location = new System.Drawing.Point(90, 36);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(410, 702);
+            this.panel2.Size = new System.Drawing.Size(420, 702);
             this.panel2.TabIndex = 30;
             // 
             // panel1
@@ -406,9 +407,9 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.textBox8);
-            this.panel1.Location = new System.Drawing.Point(499, 24);
+            this.panel1.Location = new System.Drawing.Point(622, 36);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(410, 553);
+            this.panel1.Size = new System.Drawing.Size(480, 553);
             this.panel1.TabIndex = 31;
             // 
             // panel3
@@ -419,19 +420,20 @@
             this.panel3.Controls.Add(this.textBox3);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.textBox13);
-            this.panel3.Location = new System.Drawing.Point(21, 462);
+            this.panel3.Location = new System.Drawing.Point(51, 462);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(370, 88);
             this.panel3.TabIndex = 27;
             // 
             // button2
             // 
+            this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(894, 1);
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(1118, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(39, 38);
             this.button2.TabIndex = 32;
-            this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -440,7 +442,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(53)))), ((int)(((byte)(66)))));
-            this.ClientSize = new System.Drawing.Size(937, 750);
+            this.ClientSize = new System.Drawing.Size(1159, 750);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
