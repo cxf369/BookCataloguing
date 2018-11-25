@@ -73,7 +73,7 @@
             this.listBox1.Location = new System.Drawing.Point(25, 16);
             this.listBox1.Margin = new System.Windows.Forms.Padding(2);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(259, 494);
+            this.listBox1.Size = new System.Drawing.Size(259, 646);
             this.listBox1.TabIndex = 0;
             this.listBox1.ValueMember = "bid";
             this.listBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.listBox1_MouseMove);
@@ -201,7 +201,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 47);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(311, 566);
+            this.panel1.Size = new System.Drawing.Size(311, 703);
             this.panel1.TabIndex = 15;
             // 
             // bookTableAdapter
@@ -236,9 +236,9 @@
             this.label7.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bookBindingSource, "bimgurl", true));
             this.label7.Location = new System.Drawing.Point(1096, 591);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(51, 13);
+            this.label7.Size = new System.Drawing.Size(34, 13);
             this.label7.TabIndex = 18;
-            this.label7.Text = "dummyurl";
+            this.label7.Text = "imgurl";
             // 
             // button3
             // 
@@ -272,11 +272,11 @@
             // 
             this.label9.AutoSize = true;
             this.label9.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.locationBindingSource, "location", true));
-            this.label9.Location = new System.Drawing.Point(366, 447);
+            this.label9.Location = new System.Drawing.Point(366, 465);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(35, 13);
+            this.label9.Size = new System.Drawing.Size(38, 13);
             this.label9.TabIndex = 20;
-            this.label9.Text = "label9";
+            this.label9.Text = "lcation";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // locationBindingSource
@@ -293,7 +293,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(1159, 613);
+            this.ClientSize = new System.Drawing.Size(1159, 750);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);

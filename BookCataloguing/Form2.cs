@@ -103,16 +103,20 @@ namespace BookCataloguing
 
         private void button3_Click(object sender, EventArgs e)
         {
+            SqlDataReader Dr1;
             con.Open();
 
-            String readnow = label9.Text;
-            string syntax = "SELECT location FROM location WHERE bid=" + readnow;
+            String bidlink = label8.Text;
+            string syntax = "SELECT location FROM location WHERE bid=" + bidlink;
             cmd = new SqlCommand(syntax, con);
             Dr1 = cmd.ExecuteReader();
             Dr1.Read();
-            Process.Start(Dr1[0].ToString());
-
+            string loc = Dr1[0].ToString();
+            loc.Trim();
+            Process.Start(loc);
+           
             con.Close();
+            return;
         }
 
         private void label9_Click(object sender, EventArgs e)
