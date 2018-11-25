@@ -58,7 +58,15 @@ namespace BookCataloguing
             pictureBox1.ImageLocation = a;
             
         }
-       
+       public int Readevent(string loc)
+        {
+            if (loc.Length < 10)
+            {
+                MessageBox.Show(loc);
+                return 0;
+            }
+            else return 1;
+        }
         
         private void button1_Click_1(object sender, EventArgs e)
         {
@@ -113,8 +121,11 @@ namespace BookCataloguing
             Dr1.Read();
             string loc = Dr1[0].ToString();
             loc.Trim();
-            Process.Start(loc);
-           
+            int a = Readevent(loc);
+            if (a == 1)
+            {
+                Process.Start(Dr1[0].ToString());
+            }
             con.Close();
             return;
         }

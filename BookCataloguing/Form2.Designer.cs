@@ -272,9 +272,10 @@
             // 
             this.label9.AutoSize = true;
             this.label9.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.locationBindingSource, "location", true));
-            this.label9.Location = new System.Drawing.Point(366, 465);
+            this.label9.Font = new System.Drawing.Font("Tahoma", 21.75F, System.Drawing.FontStyle.Bold);
+            this.label9.Location = new System.Drawing.Point(417, 449);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(38, 13);
+            this.label9.Size = new System.Drawing.Size(114, 35);
             this.label9.TabIndex = 20;
             this.label9.Text = "lcation";
             this.label9.Click += new System.EventHandler(this.label9_Click);
