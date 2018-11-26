@@ -87,6 +87,7 @@ namespace BookCataloguing
 
         private void button5_Click(object sender, EventArgs e)
         {
+
             con.Open();
 
             String b = label8.Text;
@@ -111,6 +112,7 @@ namespace BookCataloguing
 
         private void button3_Click(object sender, EventArgs e)
         {
+            SqlCommand cmd;
             SqlDataReader Dr1;
             con.Open();
 
