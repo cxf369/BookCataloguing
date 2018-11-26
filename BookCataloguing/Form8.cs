@@ -36,7 +36,7 @@ namespace BookCataloguing
             cmd.Parameters.AddWithValue("@bpubyr", textBox10.Text);
             cmd.Parameters.AddWithValue("@breview", textBox8.Text);
             cmd.Parameters.AddWithValue("@rating", textBox2.Text);
-
+            cmd.Parameters.AddWithValue("@authimgurl", textBox7.Text);
             cmd.Parameters.AddWithValue("@authname", textBox6.Text);
             cmd.Parameters.AddWithValue("@awards", textBox5.Text);
             cmd.Parameters.AddWithValue("@gname", textBox3.Text);

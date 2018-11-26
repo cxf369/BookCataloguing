@@ -21,10 +21,17 @@ namespace BookCataloguing
         {
             // TODO: This line of code loads data into the 'database1DataSet1.logdetails' table. You can move, or remove it, as needed.
             this.logdetailsTableAdapter.Fill(this.database1DataSet1.logdetails);
+            this.dataGridView2.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dataGridView2.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
         }
 
         private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }

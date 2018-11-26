@@ -44,16 +44,17 @@ namespace BookCataloguing
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+
             try
             {
-                con.Open();
+
                 SqlCommand cmd = new SqlCommand("delete_sp", con);
+                cmd.CommandType = CommandType.StoredProcedure;
 
-                int x = Convert.ToInt16(label3.Text);
+                cmd.Parameters.AddWithValue("@bid", label3.Text);
 
-                cmd.Parameters.Add("@bid", x);
-               
+                con.Open();
+
                 try
                 {
                     cmd.ExecuteNonQuery();
@@ -71,7 +72,10 @@ namespace BookCataloguing
             {
                 MessageBox.Show(" " + ex);
             }
+            this.Close();
         }
+
+
 
         private void button4_Click(object sender, EventArgs e)
         {

@@ -30,18 +30,20 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form7));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.logidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.transactionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button2 = new System.Windows.Forms.Button();
             this.logdetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.database1DataSet1 = new BookCataloguing.Database1DataSet1();
             this.logdetailsTableAdapter = new BookCataloguing.Database1DataSet1TableAdapters.logdetailsTableAdapter();
-            this.button2 = new System.Windows.Forms.Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.logidDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.transactionDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logdetailsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -55,30 +57,17 @@
             this.panel2.Size = new System.Drawing.Size(1159, 47);
             this.panel2.TabIndex = 10;
             // 
-            // dataGridView1
+            // button2
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.logidDataGridViewTextBoxColumn,
-            this.transactionDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.logdetailsBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(46, 73);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1046, 509);
-            this.dataGridView1.TabIndex = 11;
-            // 
-            // logidDataGridViewTextBoxColumn
-            // 
-            this.logidDataGridViewTextBoxColumn.DataPropertyName = "logid";
-            this.logidDataGridViewTextBoxColumn.HeaderText = "logid";
-            this.logidDataGridViewTextBoxColumn.Name = "logidDataGridViewTextBoxColumn";
-            // 
-            // transactionDataGridViewTextBoxColumn
-            // 
-            this.transactionDataGridViewTextBoxColumn.DataPropertyName = "transaction";
-            this.transactionDataGridViewTextBoxColumn.HeaderText = "transaction";
-            this.transactionDataGridViewTextBoxColumn.Name = "transactionDataGridViewTextBoxColumn";
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(1110, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(49, 47);
+            this.button2.TabIndex = 33;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // logdetailsBindingSource
             // 
@@ -94,16 +83,52 @@
             // 
             this.logdetailsTableAdapter.ClearBeforeFill = true;
             // 
-            // button2
+            // dataGridView2
             // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(1110, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(49, 47);
-            this.button2.TabIndex = 33;
-            this.button2.UseVisualStyleBackColor = true;
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.logidDataGridViewTextBoxColumn1,
+            this.transactionDataGridViewTextBoxColumn1});
+            this.dataGridView2.DataSource = this.logdetailsBindingSource;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(110)))), ((int)(((byte)(114)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(110)))), ((int)(((byte)(114)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(167)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView2.EnableHeadersVisualStyles = false;
+            this.dataGridView2.Location = new System.Drawing.Point(29, 68);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.dataGridView2.RowHeadersVisible = false;
+            this.dataGridView2.Size = new System.Drawing.Size(1057, 513);
+            this.dataGridView2.TabIndex = 12;
+            // 
+            // logidDataGridViewTextBoxColumn1
+            // 
+            this.logidDataGridViewTextBoxColumn1.DataPropertyName = "logid";
+            this.logidDataGridViewTextBoxColumn1.HeaderText = "logid";
+            this.logidDataGridViewTextBoxColumn1.Name = "logidDataGridViewTextBoxColumn1";
+            // 
+            // transactionDataGridViewTextBoxColumn1
+            // 
+            this.transactionDataGridViewTextBoxColumn1.DataPropertyName = "transaction";
+            this.transactionDataGridViewTextBoxColumn1.HeaderText = "transaction";
+            this.transactionDataGridViewTextBoxColumn1.Name = "transactionDataGridViewTextBoxColumn1";
             // 
             // Form7
             // 
@@ -111,7 +136,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1159, 750);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -120,9 +145,9 @@
             this.Text = "Form7";
             this.Load += new System.EventHandler(this.Form7_Load);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logdetailsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -130,12 +155,12 @@
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private Database1DataSet1 database1DataSet1;
         private System.Windows.Forms.BindingSource logdetailsBindingSource;
         private Database1DataSet1TableAdapters.logdetailsTableAdapter logdetailsTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn logidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn transactionDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn logidDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn transactionDataGridViewTextBoxColumn1;
     }
 }
