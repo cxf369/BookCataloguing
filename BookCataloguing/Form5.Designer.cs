@@ -91,10 +91,11 @@
             this.comboBox1.DataSource = this.awardsBindingSource;
             this.comboBox1.DisplayMember = "awards";
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(33, 94);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(244, 21);
+            this.comboBox1.Size = new System.Drawing.Size(244, 27);
             this.comboBox1.TabIndex = 28;
             this.comboBox1.ValueMember = "awards";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
